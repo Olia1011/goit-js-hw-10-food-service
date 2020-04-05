@@ -15,12 +15,21 @@ function themeChange(e){
   if(e.currentTarget.checked === true) {
     document.body.classList.remove(theme.LIGHT);
     document.body.classList.add(theme.DARK);
-    localStorage.getItem('theme','DARK');
-    localStorage.setItem('theme','LIGHT');
+    localStorage.save('theme','DARK');
+    // localStorage.setItem('theme','LIGHT');
 
   } else if(e.currentTarget.checked !== true){
     document.body.classList.remove(theme.DARK);
     document.body.classList.add(theme.LIGHT);
-    localStorage.getItem('theme','LIGTH');
+    localStorage.save('theme','LIGTH');
   }
+}
+
+
+
+const themeChanger = localStorage.load("theme","DARK")
+
+if(themeChanger === "DARK"){
+  refs.inputSwitch.checked = true
+  document.body.classList.add(theme.DARK);
 }
