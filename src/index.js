@@ -1,7 +1,7 @@
-import dishes  from './menu.json';
-import dishesItem from './menu-description.hbs';
-import './theme';
-import './styles.css';
+import dishes  from './js/menu.json';
+import dishesItem from './templates/menu-description.hbs';
+import './js/theme';
+import './decoration/styles.css';
 
 
 
